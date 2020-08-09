@@ -14,6 +14,7 @@ exit'''
           steps {
             git(url: 'https://github.com/dajxennx/FisrtRepo.git', branch: 'helloRuby')
             sh 'bash helloRuby.sh'
+            git(url: 'https://github.com/dockerdemo/apache.git', branch: 'master')
           }
         }
 
