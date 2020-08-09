@@ -12,7 +12,7 @@ exit'''
 
         stage('hr') {
           steps {
-            git(url: 'https://github.com/dajxennx/FisrtRepo.git', branch: 'master')
+            git(url: 'https://github.com/dajxennx/FisrtRepo.git', branch: 'helloRuby')
             sh 'bash helloRuby.sh'
           }
         }
