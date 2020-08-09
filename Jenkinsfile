@@ -2,9 +2,20 @@ pipeline {
   agent any
   stages {
     stage('error') {
-      steps {
-        sh '''bash hw.sh
+      parallel {
+        stage('error') {
+          steps {
+            sh '''bash hw.sh
 exit'''
+          }
+        }
+
+        stage('hr') {
+          steps {
+            git(url: 'https://github.com/dajxennx/FisrtRepo.git', branch: 'master')
+          }
+        }
+
       }
     }
 
