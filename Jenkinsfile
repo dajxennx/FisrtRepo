@@ -1,9 +1,10 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('error') {
       steps {
-        sh 'bash hw.sh'
+        sh '''bash hw.sh
+exit'''
       }
     }
 
