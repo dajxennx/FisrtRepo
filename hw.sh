@@ -1,1 +1,1 @@
-echo 'Hello World!'
+echo 'Hello World and run Test'
