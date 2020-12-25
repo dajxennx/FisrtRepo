@@ -1,1 +1,1 @@
-echo 'Hello World and run Test'
+echo 'Hello World and run Test, trigger hook'
