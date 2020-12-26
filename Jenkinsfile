@@ -1,8 +1,13 @@
 pipeline {
     agent any
+  //paramters
 parameters {
+        //string parameter
         string(name: 'Greeting', defaultValue: 'Hello', description: 'How should I greet the world?')
+        //choice paramter
+        choice(name: 'Stage', choices: ['dev', 'test', 'uat'], description: 'Deployment Stage')
     }
+    //stages of build
     stages {
       stage('Init') {
             steps {
@@ -11,7 +16,7 @@ parameters {
         }
         stage('Build') {
             steps {
-                echo 'Building..'
+                echo "Building ${params.Stage}"
 
             }
         }
