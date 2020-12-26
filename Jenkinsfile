@@ -16,7 +16,7 @@ parameters {
         }
         stage('Build') {
             steps {
-                echo "Building ${params.Stage}"
+                echo "Building ${params.Stage}."
 
             }
         }
