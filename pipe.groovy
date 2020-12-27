@@ -12,9 +12,14 @@ pipelineJob("MyProject-Build") {
     }
     definition {
         cpsScm {
+            lightweight()
             scm {
-                git('git@github.com:dajxennx/FisrtRepo.git')
+                git {
                 branch('origin/master')
+                remote {
+                    url('git@github.com:dajxennx/FisrtRepo.git')
+                }
+                }
                 scriptPath('JenkinsFile')
             }
         }
