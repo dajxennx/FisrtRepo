@@ -1,0 +1,18 @@
+pipeline {
+    agent any
+  //paramters
+parameters {
+        //string parameter
+        string(name: 'Testparam', defaultValue: 'test', description: 'Job seeds test')
+        //choice paramter
+        //choice(name: 'Stage', choices: ['dev', 'test', 'uat'], description: 'Deployment Stage')
+    }
+    //stages of build
+    stages {
+      stage('Test') {
+            steps {
+                echo "${params.Testparam} passed!"
+            }
+        }
+    }
+}
