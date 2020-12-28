@@ -20,7 +20,7 @@ pipelineJob("MyProject-Build") {
                     url('git@github.com:dajxennx/FisrtRepo.git')
                 }
                 }
-                scriptPath('JenkinsFile')
+                scriptPath('./JenkinsFile')
             }
         }
     }
