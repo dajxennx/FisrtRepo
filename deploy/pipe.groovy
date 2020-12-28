@@ -4,9 +4,11 @@ pipelineJob("MyProject-Build") {
         properties {
         pipelineTriggers {
             triggers {
+                /*
                 pollSCM {
                     scmpoll_spec('H/5 * * * *')
                 }
+                */
             }
         }
     }
