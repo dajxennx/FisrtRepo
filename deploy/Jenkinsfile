@@ -16,19 +16,17 @@ parameters {
         }
         stage('Build') {
             steps {
-                echo "Building ${params.Stage}."
-
+                sh '''
+                echo "The test is running in ${params.Stage} mode"
+                bash ./hw.sh
+                exit
+                '''
             }
         }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
+    }
+    post { 
+        always { 
+            echo 'I will always say Hello again!'
         }
     }
 }
