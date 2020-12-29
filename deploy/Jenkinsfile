@@ -6,7 +6,7 @@ parameters {
         string(name: 'Greeting', defaultValue: 'Hello', description: 'How should I greet the world?')
         //choice paramter
         choice(name: 'Stage', choices: ['dev', 'test', 'uat'], description: 'Deployment Stage')
-        //choice(name: 'Tester', choices: ['Danny', 'Ruby', 'William'], description: 'Tester')
+        choice(name: 'Tester', choices: ['Danny', 'Ruby', 'William'], description: 'Tester')
     }
     //stages of build
     stages {
