@@ -16,9 +16,10 @@ parameters {
         }
         stage('Build') {
             steps {
-                sh '''
+                sh '''#!/bin/bash
                 echo "The test is running in ${params.Stage} mode"
-                bash ./hw.sh
+                ls
+                bash hw.sh
                 exit
                 '''
             }
