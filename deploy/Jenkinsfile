@@ -12,7 +12,6 @@ parameters {
       stage('Init') {
             steps {
                 echo "${params.Greeting} World!"
-                echo "${params.Stage} World!"
             }
         }
         stage('Build') {
