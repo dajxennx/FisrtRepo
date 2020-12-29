@@ -6,6 +6,7 @@ parameters {
         string(name: 'Greeting', defaultValue: 'Hello', description: 'How should I greet the world?')
         //choice paramter
         choice(name: 'Stage', choices: ['dev', 'test', 'uat'], description: 'Deployment Stage')
+        choice(name: 'Tester', choices: ['Danny', 'Ruby', 'William'], description: 'Tester')
     }
     //stages of build
     stages {
@@ -17,6 +18,7 @@ parameters {
         stage('Build') {
             environment {
                 Greet = "${params.Greeting}"
+                Tester = "${params.Tester}"
             }
             steps {
                 /*
@@ -33,15 +35,18 @@ parameters {
                 '''
             }
         }
+        /*post build action, build another project named MyProject-Test'*/
         stage ('Starting downstream job ') {
             steps {
                 build job: 'MyProject-Test'
              }
         }
     }
+  /*
     post { 
         always { 
             echo 'I will always say Hello again!'
-        }
+        } 
     }
+    */
 }
