@@ -22,8 +22,8 @@ parameters {
                 the script to run with /bin/bash instead of /bin/sh, needs 
                 to be on the first line of the file or it will be ignored.
                 */
-                sh '''#!/bin/bash     
-                echo "The test is running in \"${params.Stage}\" mode"
+                sh '''#!/bin/bash
+                echo "The test is running in mode"
                 ls
                 bash hw.sh
                 exit
