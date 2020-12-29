@@ -12,13 +12,18 @@ parameters {
       stage('Init') {
             steps {
                 echo "${params.Greeting} World!"
-                echo "${params.Stage} mode"
             }
         }
         stage('Build') {
             steps {
-                sh '''#!/bin/bash
-                echo "The test is running in ${params.Stage} mode"
+                /*
+                The Groovy script you provided is formatting the first line 
+                as a blank line in the resultant script. The shebang, telling
+                the script to run with /bin/bash instead of /bin/sh, needs 
+                to be on the first line of the file or it will be ignored.
+                */
+                sh '''#!/bin/bash     
+                echo "The test is running in \"${params.Stage}\" mode"
                 ls
                 bash hw.sh
                 exit
