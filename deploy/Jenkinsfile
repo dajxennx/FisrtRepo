@@ -23,7 +23,7 @@ parameters {
                 to be on the first line of the file or it will be ignored.
                 */
                 sh '''#!/bin/bash
-                echo "The test is running in ${params.Stage} mode"
+                echo "The test is running in \"${params.Stage}\" mode"
                 ls
                 bash hw.sh
                 exit
