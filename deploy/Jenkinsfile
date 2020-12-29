@@ -33,6 +33,11 @@ parameters {
                 '''
             }
         }
+        stage ('Starting downstream job ') {
+            steps {
+                build job: 'MyProject-Test'
+             }
+        }
     }
     post { 
         always { 
