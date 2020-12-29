@@ -1,6 +1,10 @@
 //def gitUrl = "https://github.com/example/project.git"
 
 pipelineJob("MyProject-Build") {
+    parameters {
+        booleanParam('FLAG', true)
+        choiceParam('OPTION', ['option 1 (default)', 'option 2', 'option 3'])
+    }
         properties {
         pipelineTriggers {
             triggers {
