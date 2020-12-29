@@ -1,5 +1,6 @@
 pipeline {
     agent any
+    /*
   //paramters
 parameters {
         //string parameter
@@ -8,6 +9,7 @@ parameters {
         choice(name: 'Stage', choices: ['dev', 'test', 'uat'], description: 'Deployment Stage')
         choice(name: 'Tester', choices: ['Danny', 'Ruby', 'William'], description: 'Tester')
     }
+    */
     //stages of build
     stages {
       stage('Init') {

@@ -4,10 +4,10 @@ pipelineJob("MyProject-Build") {
       //paramters
 parameters {
         //string parameter
-        string(name: 'Greeting', defaultValue: 'Hello', description: 'How should I greet the world?')
+        stringParam('Greeting', 'Hello', 'How should I greet the world?')
         //choice paramter
-        choice(name: 'Stage', choices: ['dev', 'test', 'uat'], description: 'Deployment Stage')
-        choice(name: 'Tester', choices: ['Danny', 'Ruby', 'William'], description: 'Tester')
+        choiceParam('Stage', ['dev', 'test', 'uat'], 'Deployment Stage')
+        choiceParam('Tester', ['Danny', 'Ruby', 'William'], 'Tester')
     }
         properties {
         pipelineTriggers {
