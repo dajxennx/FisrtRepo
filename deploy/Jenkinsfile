@@ -42,9 +42,6 @@ parameters {
         }
         /*post build action, build another project named MyProject-Test'*/
         stage ('Starting downstream job ') {
-         environment {
-                Tester = "${params.Tester}"
-            }
             steps {
                 build job: 'MyProject-Test'
              }
