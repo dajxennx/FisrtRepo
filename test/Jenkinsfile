@@ -3,8 +3,11 @@ pipeline {
     //stage of test
     stages {
       stage('Test') {
+          environment {
+                Tester = "${params.Tester}"
+            }
             steps {
-                echo "test passed by ${params.Tester}!"
+                echo "test passed by $Tester!"
             }
         }
     }
