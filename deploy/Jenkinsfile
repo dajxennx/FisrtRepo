@@ -29,6 +29,9 @@ parameters {
                 the script to run with /bin/bash instead of /bin/sh, needs 
                 to be on the first line of the file or it will be ignored.
                 */
+
+                //parameter pass into hw.sh $Tester
+                //shaba is required if running bash
                 echo "The test is running in ${params.Stage} mode" //paramas seems only can be used outside sh
                 sh '''#!/bin/bash
                 echo "Test parameter $Greet"
