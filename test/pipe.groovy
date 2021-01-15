@@ -25,9 +25,7 @@ pipelineJob("MyProject-Test") {
                 scriptPath('test/Jenkinsfile')
             }
             triggers {
-            buildResult('H/* * * * *') {
-            upstream('MyProject-Build', 'UNSTABLE')
-        }
+            upstream('MyProject-Build', 'STABLE')
         }
     }
 }
