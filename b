@@ -1,4 +1,5 @@
 we
+<<<<<<< HEAD
 a
 b
 testtest
@@ -16,3 +17,6 @@ e
 e
 f
 >>>>>>> 7206e0c... test
+=======
+sfds
+>>>>>>> a1850e9... test
